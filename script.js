@@ -75,12 +75,7 @@ function drawW(n, lines = false) {
 
         ctx.fillStyle = 'red'
 
-        if (THICKNESS > 1) {
-            coordinates[0] -= THICKNESS / 2
-            coordinates[1] -= THICKNESS / 2
-        }
-        
-        ctx.fillRect(coordinates[0], coordinates[1], THICKNESS, THICKNESS)
+        ctx.fillRect(coordinates[0] - THICKNESS / 2, coordinates[1] - THICKNESS / 2, THICKNESS, THICKNESS)
         ctx.stroke()
         
     }
@@ -113,7 +108,7 @@ function drawCoordinateAxisDivision() {
         ctx.moveTo(coordinates[0], coordinates[1] - 5);
         ctx.lineTo(coordinates[0], coordinates[1] + 5);
     
-       
+        
         if (x === -1 || x === 1) {
             ctx.font = '12px Arial';
             ctx.fillText(x, coordinates[0] - 5, coordinates[1] + 17);
