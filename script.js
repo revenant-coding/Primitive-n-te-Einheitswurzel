@@ -74,6 +74,12 @@ function drawW(n, lines = false) {
         }
 
         ctx.fillStyle = 'red'
+
+        if (THICKNESS > 1) {
+            coordinates[0] -= THICKNESS / 2
+            coordinates[1] -= THICKNESS / 2
+        }
+        
         ctx.fillRect(coordinates[0], coordinates[1], THICKNESS, THICKNESS)
         ctx.stroke()
         
