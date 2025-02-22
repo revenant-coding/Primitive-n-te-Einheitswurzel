@@ -1,12 +1,12 @@
 let THICKNESS = 1
-const WIDTH = 801
-const HEIGHT = 801
+let WIDTH = 801
+let HEIGHT = 801
 const XMAX = 2
 const XMIN = -2
 const YMAX = 2
 const YMIN = -2
-const XFACTOR = WIDTH / (XMAX - XMIN)
-const YFACTOR = HEIGHT / (YMAX - YMIN)
+let XFACTOR = WIDTH / (XMAX - XMIN)
+let YFACTOR = HEIGHT / (YMAX - YMIN)
 const e = Math.E
 const pi = Math.PI
 
@@ -140,6 +140,29 @@ function draw(n, lines = false) {
     drawCoordinateAxisDivision()
     drawW(n, lines)
 }
+
+const xInput = document.getElementById('x-input')
+const yInput = document.getElementById('y-input')
+
+xInput.addEventListener('change', () => {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT)
+
+    WIDTH = parseInt(xInput.value)
+    canvas.width = WIDTH
+    XFACTOR = WIDTH / (XMAX - XMIN)
+    draw(n, lineCheckbox.checked)
+
+})
+
+yInput.addEventListener('change', () => {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT)
+
+    HEIGHT = parseInt(yInput.value)
+    canvas.height = HEIGHT
+    YFACTOR = HEIGHT / (YMAX - YMIN)
+    draw(n, lineCheckbox.checked)
+})
+
 
 const lineCheckbox = document.getElementById('show-lines')
 
