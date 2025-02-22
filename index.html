@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisierung Primitive n-Te Einheitswurzeln</title>
+</head>
+<body>
+    
+    <canvas id="canvas"></canvas>
+    
+    <div style="position: fixed; top: 20px; left: 1000px; padding: 10px; background-color: #f1f1f1; display: flex; flex-direction: column;">
+        <div>
+            n: <input type="number" value="5" id="n-input">
+        </div>
+        <div>
+            Stärke: <input type="number" id="thickness" value="1" placeholder="1">
+        </div>
+
+
+        <div>
+            <input type="checkbox" id="show-lines"> Linien
+           
+        </div>
+
+        <!--<div>
+            Linienstärke: <input type="number" id="line-thickness" placeholder="1">
+        </div>-->
+
+        
+    </div>
+
+    <p id="number"></p>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
