@@ -107,8 +107,8 @@ function drawCoordinateAxisDivision() {
         ctx.moveTo(coordinates[0], coordinates[1] - 5);
         ctx.lineTo(coordinates[0], coordinates[1] + 5);
     
-        // draw number only for the ticks closest to 0 (chatgpt)
-        if (x === Math.floor(x) && (x === -1 || x === 1)) {
+       
+        if (x === -1 || x === 1) {
             ctx.font = '12px Arial';
             ctx.fillText(x, coordinates[0] - 5, coordinates[1] + 17);
         }
@@ -122,8 +122,8 @@ function drawCoordinateAxisDivision() {
         ctx.moveTo(coordinates[0] - 5, coordinates[1]);
         ctx.lineTo(coordinates[0] + 5, coordinates[1]);
     
-        // draw number only for the ticks closest to 0 (chatgpt)
-        if (y === Math.floor(y) && (y === -1 || y === 1)) {
+        
+        if (y === -1 || y === 1) {
             ctx.font = '12px Arial';
             ctx.fillText(y, coordinates[0] - 20, coordinates[1] + 3);
         }
